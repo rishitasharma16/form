@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppContext from "../context/AppContext";
+import Navbar from "../components/Navbar";
 
 
 function Form() {
@@ -39,7 +40,10 @@ function Form() {
   };
 
   return (
+  <div>
+      <Navbar/>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+     
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
@@ -83,6 +87,7 @@ function Form() {
         </form>
       </div>
     </div>
+  </div>
   );
 }
 
